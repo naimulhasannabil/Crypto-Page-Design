@@ -7,7 +7,7 @@ const AccountsPanel = () => {
   return (
     <div className="bg-[#7983F4] rounded-3xl p-8 text-white h-full">
       {/* Top section with balance and card info */}
-      <div className="bg-white/10 rounded-2xl p-6 mb-8 relative bg-[#9099FF]">
+      <div className="bg-white/10 rounded-2xl p-6 mb-8 relative bg-[rgb(144,153,255)]">
         <div>
           <div className="text-3xl">
                 284,196<span className="text-base align-down">.00</span>
@@ -40,7 +40,7 @@ const AccountsPanel = () => {
 
         {/* Illustration */}
         <div className="absolute right-0 bottom-0">
-          <img src="/images/illustration.png" alt="Illustration" className="h-40 w-16 object-contain" />
+          <img src="/images/illustration.png" alt="Illustration" className="h-[10rem] w-[] object-contain" />
         </div>
       </div>
 
