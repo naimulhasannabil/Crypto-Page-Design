@@ -1,45 +1,29 @@
 import React from 'react';
 
-const ChartLine = ({ trend, height = 30 }) => {
-  // Generate random points for the chart line
-  const generatePoints = () => {
-    const points = [];
-    const numPoints = 10;
-    let prevY = 50;
-    
-    for (let i = 0; i < numPoints; i++) {
-      const x = (i / (numPoints - 1)) * 100;
-      // Generate a random y value that's not too far from the previous one
-      const randomChange = Math.random() * 20 - 10;
-      let y = prevY + randomChange;
-      // Keep y within bounds
-      y = Math.max(10, Math.min(90, y));
-      prevY = y;
-      points.push(`${x},${y}`);
+const ChartLine = ({ trend, height = 30, cryptoId }) => {
+  // Map crypto IDs to their respective graph images
+  const getGraphImage = (id) => {
+    const graphMap = {
+      btc: "/images/crypto/graphBTC.png",
+      ltc: "/images/crypto/graphLTC.png",
+      eth: "/images/crypto/graphETH.png",
+      zcs: "/images/crypto/graphZCS.png",
+      bet: "/images/crypto/graphBET.png",
+      sol: "/images/crypto/graphSOL.png",
     }
-    
-    // For uptrend, make sure the last point is higher than the first
-    if (trend === 'up' && prevY < 50) {
-      points[points.length - 1] = `100,${30}`;
-    } else if (trend === 'down' && prevY > 50) {
-      points[points.length - 1] = `100,${70}`;
-    }
-    
-    return points.join(' ');
-  };
 
-  const color = trend === 'up' ? '#4ade80' : '#ef4444';
-  
+    return graphMap[id] || "/images/crypto/graphBTC.png" // Default to BTC graph if ID not found
+  }
+
   return (
-    <svg width="100%" height={height} viewBox="0 0 100 100" preserveAspectRatio="none">
-      <polyline
-        points={generatePoints()}
-        fill="none"
-        stroke={color}
-        strokeWidth="2"
+    <div className="w-full h-full">
+      <img
+        src={getGraphImage(cryptoId) || "/placeholder.svg"}
+        alt={`${cryptoId} graph`}
+        className="w-[6rem] h-[3rem] -mt-8 mb-2 object-contain"
       />
-    </svg>
-  );
-};
+    </div>
+  )
+}
 
-export default ChartLine;
+export default ChartLine
