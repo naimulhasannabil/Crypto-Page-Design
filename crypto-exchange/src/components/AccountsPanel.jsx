@@ -7,7 +7,7 @@ const AccountsPanel = () => {
   return (
     <div className="bg-[#7983F4] rounded-3xl p-8 text-white h-full">
       {/* Top section with balance and card info */}
-      <div className="bg-white/10 rounded-2xl p-6 mb-8 relative bg-[#9099FF]">
+      <div className="bg-white/10 rounded-2xl p-6 mb-8 relative bg-[#9099ff]">
         <div>
           <div className="text-3xl">
                 284,196<span className="text-base align-down">.00</span>

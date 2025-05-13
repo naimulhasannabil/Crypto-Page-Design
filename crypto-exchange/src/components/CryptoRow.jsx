@@ -46,7 +46,7 @@ const CryptoRow = ({ crypto }) => {
         <span className="text-gray-400 mx-2">=</span>
         <div className="ml-2">
           <div className="font-medium text-gray-800">{formatValue(usdValue)}</div>
-          <div className="text-xs bg-gray-200 text-gray-500 px-5 py-1 rounded-full font-medium">USD</div>
+          <div className="text-xs bg-[#CCCFDE] text-white px-5 py-1 rounded-full font-bold">USD</div>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ const CryptoRow = ({ crypto }) => {
         <span className="text-gray-400 mx-2">=</span>
         <div className="ml-2">
           <div className="font-medium text-gray-800">{formatValue(eurValue)}</div>
-          <div className="text-xs bg-gray-200 text-gray-500 px-5 py-1 rounded-full font-medium">
+          <div className="text-xs bg-[#CCCFDE] text-white px-5 py-1 rounded-full font-bold">
             {id === "btc" || id === "ltc" || id === "eth" || id === "zcs" ? "GBR" : "USD"}
           </div>
         </div>
@@ -64,7 +64,7 @@ const CryptoRow = ({ crypto }) => {
         <span className="text-gray-400 mx-0">=</span>
         <div className="ml-3">
           <div className="font-medium text-gray-800">{formatValue(audValue)}</div>
-          <div className="text-xs bg-gray-200 text-gray-500 px-5 py-1 rounded-full font-medium">EUR</div>
+          <div className="text-xs bg-[#CCCFDE] text-white px-5 py-1 rounded-full font-bold">EUR</div>
         </div>
       </div>
 
