@@ -1,17 +1,17 @@
 import React from 'react';
-import AccountCard from './AccountCard';
-import { accountsData } from '../data';
+import AccountCard from "./AccountCard"
+import { accountsData } from "../data"
 import { Plus } from "lucide-react"
 
 const AccountsPanel = () => {
   return (
-    <div className="bg-[#7983F4] rounded-3xl p-8 text-white h-full">
+    <div className="bg-[#7983F4] rounded-3xl p-4 sm:p-6 lg:p-8 text-white h-full">
       {/* Top section with balance and card info */}
-      <div className="bg-white/10 rounded-2xl p-6 mb-8 relative bg-[#9099ff]">
+      <div className="bg-white/10 rounded-2xl p-4 sm:p-6 mb-4 sm:mb-8 relative bg-[rgb(144,153,255)]">
         <div>
           <div className="text-3xl">
-                284,196<span className="text-base align-down">.00</span>
-            </div>
+            284,196<span className="text-base align-down">.00</span>
+          </div>
 
           <div className="bg-[#D6DCFB] px-3 py-1 rounded-full text-xs inline-block mt-2 text-[#5e677e]">USD</div>
         </div>
@@ -40,7 +40,11 @@ const AccountsPanel = () => {
 
         {/* Illustration */}
         <div className="absolute right-0 bottom-0">
-          <img src="/images/illustration.png" alt="Illustration" className="h-[10rem] w-[] object-contain" />
+          <img
+            src="/images/illustration.png"
+            alt="Illustration"
+            className="h-[6rem] sm:h-[8rem] md:h-[10rem] w-[] object-contain"
+          />
         </div>
       </div>
 

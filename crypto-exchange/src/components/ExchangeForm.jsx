@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+"use client"
+
+import { useState } from "react"
 
 const ExchangeForm = () => {
-  const [sendAmount, setSendAmount] = useState('12,110.00');
-  const [getAmount, setGetAmount] = useState('15,135.00');
-  
+  const [sendAmount, setSendAmount] = useState("12,110.00")
+  const [getAmount, setGetAmount] = useState("15,135.00")
+
   return (
-    <div className="mt-8">
-      <div className="flex justify-between">
+    <div className="mt-4 sm:mt-6 lg:mt-8">
+      <div className="flex flex-col sm:flex-row justify-between gap-6 sm:gap-0">
         {/* Send Column */}
-        <div className="w-5/12">
+        <div className="w-full sm:w-5/12">
           <h2 className="text-xl font-medium text-gray-700 mb-4">Send</h2>
           <div className="relative">
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
@@ -22,20 +24,28 @@ const ExchangeForm = () => {
             />
           </div>
           <div className="flex space-x-6 text-sm text-gray-500 mt-2 ml-2">
-            <div>Min: <span className='font-bold'>0.005</span></div>
-            <div>Max: <span className='font-bold'>0.1455</span></div>
+            <div>
+              Min: <span className="font-bold">0.005</span>
+            </div>
+            <div>
+              Max: <span className="font-bold">0.1455</span>
+            </div>
           </div>
         </div>
 
         {/* Middle Exchange Icon */}
-        <div className="flex items-center justify-center w-2/12">
-          <div className="w-[6rem] h-[6rem] bg-gradient-to-b from-[#E7E8FA] to-[#BBBDE6] rounded-3xl shadow-2xl flex items-center justify-center -mt-0 -mb-4 border-2 border-[#E3E5F5] cursor-pointer">
-            <img src="/images/Extra/sidebar ss3.gif" alt="exchange" className="w-[4rem] h-[4rem] rounded-2xl shadow-2xl" />
+        <div className="flex items-center justify-center w-full sm:w-2/12">
+          <div className="w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] bg-gradient-to-b from-[#E7E8FA] to-[#BBBDE6] rounded-3xl shadow-2xl flex items-center justify-center -mt-0 -mb-4 border-2 border-[#E3E5F5] cursor-pointer mx-auto">
+            <img
+              src="/images/Extra/sidebar ss3.gif"
+              alt="exchange"
+              className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
 
         {/* Get Column */}
-        <div className="w-5/12">
+        <div className="w-full sm:w-5/12">
           <h2 className="text-xl font-medium text-gray-700 mb-4 text-right">Get</h2>
           <div className="relative">
             <input
@@ -54,7 +64,7 @@ const ExchangeForm = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ExchangeForm;
+export default ExchangeForm

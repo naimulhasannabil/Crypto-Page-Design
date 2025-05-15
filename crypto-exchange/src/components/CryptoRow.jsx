@@ -27,8 +27,8 @@ const CryptoRow = ({ crypto }) => {
   // }
 
   return (
-    <div className="flex items-center py-5 border-b border-gray-100">
-      <div className="flex items-center w-1/4">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center py-5 border-b border-gray-100 gap-3 sm:gap-0">
+      <div className="flex items-center w-full sm:w-1/4 mb-2 sm:mb-0">
         <div className={`w-12 h-12 rounded-2xl ${getBgColor(id)} flex items-center justify-center mr-4`}>
           <img src={icon || "/placeholder.svg"} alt={name} className="w-6 h-6" />
         </div>
@@ -42,7 +42,7 @@ const CryptoRow = ({ crypto }) => {
         </div>
       </div>
 
-      <div className="w-1/4 flex items-start">
+      <div className="w-full sm:w-1/4 flex items-start mb-2 sm:mb-0">
         <span className="text-gray-400 mx-2">=</span>
         <div className="ml-2">
           <div className="font-medium text-gray-800">{formatValue(usdValue)}</div>
@@ -50,7 +50,7 @@ const CryptoRow = ({ crypto }) => {
         </div>
       </div>
 
-      <div className="w-1/4 flex items-start">
+      <div className="w-full sm:w-1/4 flex items-start mb-2 sm:mb-0">
         <span className="text-gray-400 mx-2">=</span>
         <div className="ml-2">
           <div className="font-medium text-gray-800">{formatValue(eurValue)}</div>
@@ -60,7 +60,7 @@ const CryptoRow = ({ crypto }) => {
         </div>
       </div>
 
-      <div className="w-1/6 flex items-start">
+      <div className="w-full sm:w-1/6 flex items-start mb-2 sm:mb-0">
         <span className="text-gray-400 mx-0">=</span>
         <div className="ml-3">
           <div className="font-medium text-gray-800">{formatValue(audValue)}</div>
@@ -68,7 +68,7 @@ const CryptoRow = ({ crypto }) => {
         </div>
       </div>
 
-      <div className="w-1/6">
+      <div className="w-full sm:w-1/6">
         {/* <div className="flex items-center">
           <span className={`text-sm font-medium ${getChangeColor(trend)}`}>
             {trend === "up" ? "↑" : "↓"} {change}%

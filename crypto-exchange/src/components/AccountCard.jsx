@@ -11,15 +11,15 @@ const AccountCard = ({ account }) => {
   }
 
   return (
-    <div className="flex mb-6">
+    <div className="flex mb-4 sm:mb-6">
       {/* Bank logo */}
-      <div className="bg-white rounded-xl p-2 mr-3 w-12 h-12 flex items-center justify-center">
+      <div className="bg-white rounded-xl p-2 mr-3 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shrink-0">
         <img src={icon || "/placeholder.svg"} alt={name} className="w-8 h-8 object-contain" />
       </div>
 
       {/* Account details */}
       <div>
-        <div className="text-xl text-white">{formatBalance(balance)}</div>
+        <div className="text-lg sm:text-xl text-white">{formatBalance(balance)}</div>
         <div className="flex items-center">
           <div className="text-sm text-white/80 mr-2">{name}</div>
           <div className="bg-[#E5E5FE] px-3 py-0.5 rounded-full text-xs text-[#7a7ba2]">{currency}</div>
