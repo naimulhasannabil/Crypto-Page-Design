@@ -16,7 +16,7 @@ const ChartLine = ({ trend, height = 30, cryptoId }) => {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full ">
       <img
         src={getGraphImage(cryptoId) || "/placeholder.svg"}
         alt={`${cryptoId} graph`}
@@ -27,4 +27,3 @@ const ChartLine = ({ trend, height = 30, cryptoId }) => {
 }
 
 export default ChartLine
-

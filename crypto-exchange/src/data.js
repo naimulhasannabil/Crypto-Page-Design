@@ -7,7 +7,7 @@ export const cryptoData = [
     usdValue: 24284.57,
     eurValue: 25170.04,
     audValue: 24924.14,
-    change: 3.5,
+    change: 3.3,
     trend: "up",
     icon: "/images/crypto/bitcoin.png",
   },
@@ -20,7 +20,7 @@ export const cryptoData = [
     eurValue: 3739.87,
     audValue: 3152.0,
     change: 1.8,
-    trend: "down", // Changed to down to match the image
+    trend: "down",
     icon: "/images/crypto/litecoin.png",
   },
   {
@@ -68,7 +68,7 @@ export const cryptoData = [
     eurValue: 210.24,
     audValue: 205.3,
     change: 2.7,
-    trend: "down", // Changed to down to match the image
+    trend: "down",
     icon: "/images/crypto/solana.png",
   },
 ]
