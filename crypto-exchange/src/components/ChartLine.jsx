@@ -5,7 +5,6 @@ import { AreaChart, Area, ResponsiveContainer } from "recharts"
 const ChartLine = ({ trend, cryptoId }) => {
   // Generate random data that mimics the shape of each crypto's graph
   const getData = (id) => {
-    // Base patterns for each crypto to match the images
     const patterns = {
       btc: [10, 12, 15, 13, 16, 14, 17, 15, 18, 16, 19, 17, 20, 18, 22, 20, 25],
       ltc: [20, 22, 18, 23, 19, 24, 20, 25, 21, 26, 22, 27, 23, 28, 24, 29, 25],
@@ -21,8 +20,6 @@ const ChartLine = ({ trend, cryptoId }) => {
       value: value,
     }))
   }
-
-  // Get color based on trend
   const getColor = (trend) => {
     return trend === "up" ? "#8884d8" : "#4bc0c0"
   }
