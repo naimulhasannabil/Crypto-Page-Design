@@ -2,7 +2,7 @@ import React from 'react';
 import ChartLine from "./ChartLine"
 
 const CryptoRow = ({ crypto }) => {
-  const { symbol, name, amount, usdValue, eurValue, audValue, trend, icon, id } = crypto
+  const { symbol, name, amount, usdValue, eurValue, audValue, trend, icon, id, change } = crypto
 
   const formatValue = (value) => {
     return value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -21,10 +21,10 @@ const CryptoRow = ({ crypto }) => {
     return colors[id] || "bg-gray-50"
   }
 
-  // // Get text color for percentage change
-  // const getChangeColor = (trend) => {
-  //   return trend === "up" ? "text-indigo-500" : "text-cyan-500"
-  // }
+  // Get text color for percentage change
+  const getChangeColor = (trend) => {
+    return trend === "up" ? "text-indigo-500" : "text-cyan-500"
+  }
 
   return (
     <div className="flex flex-col sm:flex-row items-start sm:items-center py-5 border-b border-gray-100 gap-3 sm:gap-0">
@@ -68,14 +68,14 @@ const CryptoRow = ({ crypto }) => {
         </div>
       </div>
 
-      <div className="w-full sm:w-1/6">
-        {/* <div className="flex items-center">
+      <div className="w-full sm:w-1/6 relative h-12">
+        <div className="flex items-center mb-1">
           <span className={`text-sm font-medium ${getChangeColor(trend)}`}>
             {trend === "up" ? "↑" : "↓"} {change}%
           </span>
-        </div> */}
-        <div className="h-6 mt-1">
-          <ChartLine trend={trend} height={24} cryptoId={id} />
+        </div>
+        <div className="h-6 w-full">
+          <ChartLine trend={trend} cryptoId={id} />
         </div>
       </div>
     </div>
@@ -83,3 +83,4 @@ const CryptoRow = ({ crypto }) => {
 }
 
 export default CryptoRow
+
